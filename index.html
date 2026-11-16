@@ -1,0 +1,368 @@
+\<!DOCTYPE html>
+
+\<html lang="en">
+\<head>
+\<meta charset="UTF-8">
+\<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+\<title>Pipi — A Neighbourhood Cat\</title>
+
+\<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+\<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+\<link href="[https://fonts.googleapis.com/css2?family=Inter\:wght@400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Inter\:wght@400;500;600\&display=swap)" rel="stylesheet">
+
+\<style>
+\:root {
+&#x20;   \--blue: #06347d;
+&#x20;   \--beige: #f5f1e8;
+&#x20;   \--muted: #858477;
+&#x20;   \--line: #dcd6ca;
+}
+
+\* {
+&#x20;   box-sizing: border-box;
+}
+
+html {
+&#x20;   scroll-behavior: smooth;
+}
+
+body {
+&#x20;   margin: 0;
+&#x20;   background: var(--beige);
+&#x20;   color: var(--blue);
+&#x20;   font-family: 'Inter', sans-serif;
+&#x20;   font-size: 14px;
+&#x20;   line-height: 1.7;
+}
+
+.container {
+&#x20;   width: 100%;
+&#x20;   max-width: 1050px;
+&#x20;   margin: auto;
+&#x20;   padding: 0 45px;
+}
+
+/\* HEADER \*/
+
+header {
+&#x20;   padding: 35px 0;
+&#x20;   border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+&#x20;   display: flex;
+&#x20;   justify-content: space-between;
+&#x20;   align-items: center;
+}
+
+.logo {
+&#x20;   font-size: 19px;
+&#x20;   font-weight: 600;
+&#x20;   letter-spacing: 2px;
+}
+
+nav {
+&#x20;   display: flex;
+&#x20;   gap: 25px;
+}
+
+nav a {
+&#x20;   color: var(--blue);
+&#x20;   text-decoration: none;
+&#x20;   font-size: 11px;
+&#x20;   text-transform: uppercase;
+&#x20;   letter-spacing: 1px;
+}
+
+/\* INTRO \*/
+
+.intro {
+&#x20;   padding-top: 100px;
+&#x20;   padding-bottom: 85px;
+}
+
+.intro h1 {
+&#x20;   font-size: clamp(55px, 10vw, 105px);
+&#x20;   font-weight: 500;
+&#x20;   letter-spacing: -6px;
+&#x20;   line-height: 1;
+&#x20;   margin: 0 0 20px;
+}
+
+.intro p {
+&#x20;   font-size: 15px;
+&#x20;   max-width: 350px;
+&#x20;   color: var(--muted);
+}
+
+/\* SECTIONS \*/
+
+section {
+&#x20;   padding: 45px 0;
+&#x20;   border-top: 1px solid var(--line);
+}
+
+.section-heading {
+&#x20;   display: flex;
+&#x20;   justify-content: space-between;
+&#x20;   align-items: baseline;
+&#x20;   margin-bottom: 30px;
+}
+
+.section-heading h2 {
+&#x20;   font-size: 11px;
+&#x20;   font-weight: 600;
+&#x20;   text-transform: uppercase;
+&#x20;   letter-spacing: 1.5px;
+}
+
+.section-number {
+&#x20;   font-size: 11px;
+&#x20;   color: var(--muted);
+}
+
+/\* LAST SEEN \*/
+
+.last-seen {
+&#x20;   font-size: 19px;
+&#x20;   font-weight: 500;
+}
+
+.last-seen small {
+&#x20;   display: block;
+&#x20;   margin-top: 5px;
+&#x20;   font-size: 12px;
+&#x20;   font-weight: 400;
+&#x20;   color: var(--muted);
+}
+
+/\* ABOUT \*/
+
+.about-text {
+&#x20;   max-width: 600px;
+&#x20;   font-size: 16px;
+&#x20;   line-height: 1.9;
+}
+
+/\* HEALTH RECORDS \*/
+
+.record {
+&#x20;   display: flex;
+&#x20;   justify-content: space-between;
+&#x20;   padding: 17px 0;
+&#x20;   border-bottom: 1px solid var(--line);
+}
+
+.record span\:last-child {
+&#x20;   color: var(--muted);
+&#x20;   text-align: right;
+}
+
+/\* GALLERY \*/
+
+.gallery {
+&#x20;   display: grid;
+&#x20;   grid-template-columns: 1fr 1fr;
+&#x20;   gap: 18px;
+&#x20;   align-items: start;
+}
+
+.gallery img {
+&#x20;   width: 100%;
+&#x20;   display: block;
+&#x20;   object-fit: cover;
+&#x20;   background: #e8e0d3;
+}
+
+.gallery .tall {
+&#x20;   aspect-ratio: 3 / 4;
+}
+
+.gallery .wide {
+&#x20;   aspect-ratio: 4 / 3;
+}
+
+.gallery .offset {
+&#x20;   margin-top: 45px;
+}
+
+/\* DONATE \*/
+
+.donate-text {
+&#x20;   max-width: 450px;
+&#x20;   font-size: 15px;
+&#x20;   margin-bottom: 25px;
+}
+
+.donate-link {
+&#x20;   display: inline-block;
+&#x20;   color: var(--blue);
+&#x20;   text-decoration: none;
+&#x20;   border-bottom: 1px solid var(--blue);
+&#x20;   padding-bottom: 4px;
+&#x20;   font-size: 13px;
+}
+
+/\* FOOTER \*/
+
+footer {
+&#x20;   border-top: 1px solid var(--line);
+&#x20;   padding: 30px 0;
+&#x20;   color: var(--muted);
+&#x20;   font-size: 11px;
+}
+
+@media (max-width: 650px) {
+&#x20;   .container {
+&#x20;       padding: 0 22px;
+&#x20;   }
+
+&#x20;   nav {
+&#x20;       gap: 12px;
+&#x20;   }
+
+&#x20;   nav a {
+&#x20;       font-size: 9px;
+&#x20;   }
+
+&#x20;   .intro {
+&#x20;       padding-top: 75px;
+&#x20;       padding-bottom: 65px;
+&#x20;   }
+
+&#x20;   .intro h1 {
+&#x20;       letter-spacing: -4px;
+&#x20;   }
+
+&#x20;   .gallery {
+&#x20;       gap: 10px;
+&#x20;   }
+
+&#x20;   .gallery .offset {
+&#x20;       margin-top: 25px;
+&#x20;   }
+}
+\</style>
+
+\</head>
+
+\<body>
+
+\<header>
+&#x20;   \<div class="container header-inner">
+&#x20;       \<div class="logo">PIPI.\</div>
+
+```
+    <nav>
+        <a href="#about">About</a>
+        <a href="#health">Health</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+</div>
+```
+
+\</header>
+
+\<main class="container">
+
+```
+<div class="intro">
+    <h1>Pipi.</h1>
+    <p>A little neighbourhood cat. This is a space to keep track of her life, health and little adventures.</p>
+</div>
+
+<section id="last-seen">
+    <div class="section-heading">
+        <h2>Last seen</h2>
+        <span class="section-number">01</span>
+    </div>
+
+    <div class="last-seen">
+        Update coming soon.
+        <small>Location and date will be updated here.</small>
+    </div>
+</section>
+
+<section id="about">
+    <div class="section-heading">
+        <h2>About Pipi</h2>
+        <span class="section-number">02</span>
+    </div>
+
+    <div class="about-text">
+        Pipi is a neighbourhood cat who has found a little place in our hearts.
+
+        <br><br>
+
+        More about her story coming soon.
+    </div>
+</section>
+
+<section id="health">
+    <div class="section-heading">
+        <h2>Health records</h2>
+        <span class="section-number">03</span>
+    </div>
+
+    <h3 style="font-size:13px;font-weight:500;">Vaccination history</h3>
+
+    <div class="record">
+        <span>Vaccination records</span>
+        <span>To be updated</span>
+    </div>
+
+    <br>
+
+    <h3 style="font-size:13px;font-weight:500;">Spaying history</h3>
+
+    <div class="record">
+        <span>Spaying status</span>
+        <span>To be updated</span>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="section-heading">
+        <h2>Photo gallery</h2>
+        <span class="section-number">04</span>
+    </div>
+
+    <div class="gallery">
+
+        <!-- Replace these with Pipi's photographs -->
+
+        <img class="tall" src="https://placehold.co/600x800/f0e9dc/06347d?text=Pipi" alt="Pipi">
+
+        <img class="wide offset" src="https://placehold.co/600x450/e9e1d4/06347d?text=Pipi" alt="Pipi">
+
+        <img class="wide" src="https://placehold.co/600x450/e9e1d4/06347d?text=Pipi" alt="Pipi">
+
+        <img class="tall offset" src="https://placehold.co/600x800/f0e9dc/06347d?text=Pipi" alt="Pipi">
+
+    </div>
+</section>
+
+<section id="donate">
+    <div class="section-heading">
+        <h2>Support Pipi</h2>
+        <span class="section-number">05</span>
+    </div>
+
+    <p class="donate-text">
+        If you'd like to contribute towards Pipi's food, healthcare and general wellbeing, you can do so here.
+    </p>
+
+    <!-- Add your donation link below -->
+
+    <a class="donate-link" href="#" target="_blank">
+        Donate towards Pipi →
+    </a>
+</section>
+```
+
+\</main>
+
+\<footer>     \<div class="container">         Made with love for Pipi. © 2026     \</div> \</footer>
+
+\</body> \</html>
