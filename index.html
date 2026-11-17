@@ -56,18 +56,12 @@
   /* ---------- MENU BUTTONS ---------- */
   .menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 26px;
-    padding: 30px 0 50px;
-  }
-  .row {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+    padding: 30px 0 50px;
   }
+  .row { display: contents; }
   .btn {
     display: inline-flex;
     align-items: center;
@@ -79,12 +73,13 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
-    padding: 14px 24px 16px;
+    width: 148px;
+    min-height: 56px;
+    padding: 0 10px 2px;
     border-radius: 999px;
     transition: transform .15s ease;
   }
   .btn:hover { transform: translateY(-2px); }
-  .btn.big { padding: 22px 26px 24px; font-size: 17px; }
 
   /* ---------- BUBBLE POSITIONS (edit these numbers) ----------
      top:  positive = moves DOWN,  negative = moves UP
@@ -93,12 +88,6 @@
      s1 About Me | s2 Medical history | s3 Contribute
      s4 Photo gallery | s5 What to feed | s6 Last seen */
   .btn { position: relative; }
-  .s1 { top: 26px; left: 4px; }
-  .s2 { top: 0;    left: 0; }
-  .s3 { top: 6px;  left: -6px; }
-  .s4 { top: 0;    left: 6px; }
-  .s5 { top: 0;    left: -8px; }
-  .s6 { top: 22px; left: 8px; }
 
   /* ---------- SECTIONS ---------- */
   section { padding: 40px 0; border-top: 3px dotted var(--pink); }
@@ -107,7 +96,11 @@
   p  { margin: 0 0 1em; }
   ul { margin: 0 0 1em; padding-left: 1.2em; }
   .center { text-align: center; }
-  #contribute .btn { margin-top: 38px; }
+  #contribute .btn { margin-top: -4px; }
+  .btn.wide { width: auto; padding: 0 28px 2px; white-space: nowrap; }
+  .hint { font-size: 15px; font-style: italic; margin: 0 0 10px; }
+  #last-seen .btn { margin-top: 6px; }
+  .small { font-size: 15px; margin: 16px 0 0; overflow-wrap: anywhere; }
 
   .record {
     display: flex;
@@ -171,10 +164,7 @@
 
   <section id="medical">
     <h2>Medical history</h2>
-    <h3>Vaccination history</h3>
-    <div class="record"><span>Vaccination records</span><span>To be updated</span></div>
-    <h3>Spaying history</h3>
-    <div class="record"><span>Spaying status</span><span>To be updated</span></div>
+    <p>Pipi’s first vet visit is upcoming soon! Whenever we see her next we’ll take her to the clinic and update here.</p>
   </section>
 
   <section id="feed">
@@ -199,7 +189,9 @@
 
   <section id="last-seen">
     <h2>Last seen</h2>
-    <p>Update coming soon. The location and date will be added here.</p>
+    <p>14th November, 8 pm, Calcutta Rowing Club.</p>
+    <p class="hint">Spotted Pipi? Let us know where and when!</p>
+    <a class="btn wide" href="https://wa.me/919433333993?text=Hi%21%20I%20spotted%20Pipi.%0A%0APlace%3A%20%0ATime%3A%20" target="_blank" rel="noopener">Message us on WhatsApp</a>
   </section>
 
   <section id="gallery">
@@ -215,14 +207,14 @@
   <section id="contribute">
     <h2>Contribute</h2>
     <p>If you’d like to help with Pipi’s food, healthcare and general wellbeing, you can contribute here.</p>
-    <!-- Replace the # below with your donation link -->
-    <a class="btn" href="#" target="_blank" rel="noopener">Donate towards Pipi</a>
+    <a class="btn wide" href="upi://pay?pa=chakravarti.jahnavi@oksbi&pn=Jahnavi%20Chakravarti&tn=For%20Pipi&cu=INR">Donate towards Pipi</a>
+    <p class="small">On a laptop? Pay to UPI ID <strong>chakravarti.jahnavi@oksbi</strong> and remember to contact us to find out how your donation is being used!</p>
   </section>
 
 </main>
 
 <div class="contact">
-  <div class="wrap">CONTACT: <a href="mailto:jahnavi.chakravarti@gmail.com">jahnavi.chakravarti@gmail.com</a></div>
+  <div class="wrap">CONTACT: <a href="mailto:chakravarti.jahnavi@gmail.com">chakravarti.jahnavi@gmail.com</a></div>
 </div>
 
 <div class="bar bottom"><span></span><span></span><span></span></div>
